@@ -1,0 +1,34 @@
+# EnergyPlus outputs and large data files — don't commit these
+buildings/medium_office/*.idf
+buildings/medium_office/*.osm
+weather/*.epw
+results/
+*.eso
+*.mtr
+*.audit
+*.bnd
+*.eio
+*.err
+*.rdd
+*.mdd
+*.shd
+*.dxf
+*.svg
+*.end
+sqlite/
+*.sql
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# RL training artifacts
+models/*.zip
+runs/
+tensorboard_logs/
+
+# OS
+.DS_Store

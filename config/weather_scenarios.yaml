@@ -1,0 +1,42 @@
+# Weather scenarios to simulate against.
+# `file` must exist under weather/ (see weather/download_weather.sh).
+# `label` is used in plots/reports. `climate_zone` is informational.
+
+scenarios:
+  - name: stockholm
+    file: weather/stockholm.epw
+    label: "Stockholm, SE (Dfb — cold, humid continental)"
+    climate_zone: "ASHRAE 6A-ish"
+
+  - name: oslo
+    file: weather/oslo.epw
+    label: "Oslo, NO (Dfb — cold, humid continental)"
+    climate_zone: "ASHRAE 6A-ish"
+
+  - name: duluth
+    file: weather/duluth.epw
+    label: "Duluth, MN, US (Dfb — closest DOE reference climate to Nordic)"
+    climate_zone: "ASHRAE 7"
+
+  - name: chicago
+    file: weather/chicago.epw
+    label: "Chicago, IL, US (Dfa — cold benchmark, published DOE numbers exist)"
+    climate_zone: "ASHRAE 5A"
+
+building:
+  idf: buildings/medium_office/RefBldgMediumOffice.idf
+  name: "DOE Medium Office Reference — Duluth vintage (2013, ASHRAE 90.1)"
+
+simulation:
+  timestep_per_hour: 4
+  output_variables:
+    - "Zone Air Temperature"
+    - "Zone Ideal Loads Supply Air Total Cooling Energy"
+    - "Zone Ideal Loads Supply Air Total Heating Energy"
+    - "Facility Total HVAC Electricity Demand Rate"
+    - "Facility Total Building Electricity Demand Rate"
+
+controllers:
+  - rule_based
+  # - mpc          # enable once implemented (see TASKS.md Phase 5)
+  # - rl_sac       # enable once trained

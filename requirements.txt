@@ -1,0 +1,11 @@
+eppy>=0.5.63
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+pyyaml>=6.0
+gymnasium>=0.29
+stable-baselines3>=2.2
+sinergym>=3.5      # EnergyPlus RL wrapper; requires EnergyPlus installed separately
+cvxpy>=1.4         # optional, for MPC controller
+scikit-learn>=1.3  # optional, for thermal model identification (MPC)
+pytest>=7.4
