@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # EnergyPlus HVAC Optimization — Commercial Building
 
 Simulate a DOE reference commercial building (Medium Office) in EnergyPlus across multiple
@@ -76,3 +77,7 @@ though envelope U-values will need adjusting for Nordic building codes (see
 ## Status
 
 Scaffold stage — see TASKS.md for build sequence.
+=======
+# energyplus_hvac_optimization
+energyplus_hvac_optimization
+>>>>>>> ec513e5324801c5af1fef7ea6d3d1e5fcd5868a1
